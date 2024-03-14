@@ -37,6 +37,7 @@ https://github.com/harshjadon9/wato_task/assets/62889318/d7629b53-e1c3-4a41-9a1a
 
 
 ## to Run
+```npm install```
 ```npx expo```
 
 
