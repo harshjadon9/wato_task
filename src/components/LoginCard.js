@@ -27,14 +27,13 @@ const LoginCard = ({ type }) => {
         flag = 1;
       }
     } else {
-      if (name.length != 0) {
+      if (name.length != 0 && password.length != 0 && email.length != 0) {
         showToast("Account created Successfully ✅");
         flag = 0;
       } else {
         flag = 1;
       }
     }
-    console.log(flag);
     if (flag == 1) {
       showToast("Please fill out all fields ⚠️");
     } else {
@@ -56,19 +55,18 @@ const LoginCard = ({ type }) => {
         end={{ x: 0.0, y: 0.5 }}
         style={styles.card}
       >
-
         {type == "login" ? (
           ""
         ) : (
-            <>
-              {/* 'Name' input if sign up page */}
+          <>
+            {/* 'Name' input if sign up page */}
             <InputBox placeholder={"Name"} value={name} setter={setName} />
             <View style={{ height: 18 }}></View>
           </>
         )}
 
         {/* else input only email, password */}
-        
+
         <InputBox placeholder={"Email"} value={email} setter={setEmail} />
         <View style={{ height: 18 }}></View>
         <InputBox

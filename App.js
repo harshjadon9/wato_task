@@ -3,7 +3,7 @@ import * as React from "react";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import { useFonts } from "expo-font";
 
 // Screens
@@ -31,7 +31,11 @@ const App = () => {
   });
 
   if (!fontsLoaded) {
-    return <View>Loading...</View>;
+    return (
+      <View>
+        <Text>Loading...</Text>
+      </View>
+    );
   } else {
     return (
       <NavigationContainer theme={MyTheme}>
